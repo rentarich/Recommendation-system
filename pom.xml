@@ -16,7 +16,7 @@
         <module>api</module>
 
     </modules>
-    <name>Priporocilni sisten</name>
+    <name>Priporocilni sistem</name>
     <description>Storitev za priporočanje izdelkov za izposojo.</description>
 
     <properties>
