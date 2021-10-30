@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eff32e0-c6e4-44b0-9722-972f61338a19" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dockerize.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dockerize.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
     </list>
@@ -157,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635577702015</updated>
       <workItem from="1635577708548" duration="8055000" />
-      <workItem from="1635595974793" duration="2014000" />
+      <workItem from="1635595974793" duration="2085000" />
     </task>
     <servers />
   </component>

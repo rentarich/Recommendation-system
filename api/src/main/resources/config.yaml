@@ -7,7 +7,7 @@ kumuluzee:
     #    base-url: http://localhost:3334/v1/priporocila
     base-url: http://prpo-priporocilni-sistem-prpo-priporocilni-sistem.apps.us-west-1.starter.openshift-online.com/v1/priporocila
     http:
-      port: 3333 
+      port: 3333
   datasources:
     - jndi-name: jdbc/ItemsDS
       connection-url: jdbc:postgresql://localhost:5432/items
