@@ -17,7 +17,7 @@ jobs:
           java-version: 11
       - name: Build & Test & Package with Maven
         run: |
-          mvn mvn --show-version --update-snapshots --batch-mode clean package
+          mvn --show-version --update-snapshots --batch-mode clean package
       - name: Build a Docker image
         run: |
           mkdir target/dependency
