@@ -34,5 +34,5 @@ jobs:
       with:
         file: ./Dockerfile_with_maven_build
         push: true
-        tags: rso/recommendation:${{ steps.time.outputs.time }}
+        tags: ninavelikajne/recommendation-system:${{ steps.time.outputs.time }}
 
