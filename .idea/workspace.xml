@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eff32e0-c6e4-44b0-9722-972f61338a19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/classgraph-4.6.32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/commons-lang3-3.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-dataformat-csv-2.9.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-dataformat-yaml-2.9.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-datatype-jdk8-2.9.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-health-2.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-openapi-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-openapi-ui-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/microprofile-health-api-2.1.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/classes/lib/models-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/lib/models-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/org.osgi.annotation.versioning-1.0.0.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/classes/lib/services-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/lib/services-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-annotations-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-core-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-integration-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-jaxrs2-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-models-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/models/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/models/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/target/models-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/models/target/models-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/target/services-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/services/target/services-1.0.0-SNAPSHOT.jar" afterDir="false" />
     </list>
@@ -112,22 +131,22 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/services/src/main/java" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ninav\Desktop\FRI\BMA\1.letnik\1.semester\RSO\Priporocilni" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kumuluz.ee" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ninav\Desktop\FRI\BMA\1.letnik\1.semester\RSO\Priporocilni\services\src\main\java" />
       <recent name="C:\Users\ninav\Desktop\FRI\BMA\1.letnik\1.semester\RSO\Priporocilni\models\src\main\resources\sql-scripts" />
       <recent name="C:\Users\ninav\Desktop\FRI\BMA\1.letnik\1.semester\RSO\Priporocilni\models\src\main\resources\META-INF" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.kumuluz.ee" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ninav\Desktop\FRI\BMA\1.letnik\1.semester\RSO\Priporocilni" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -217,7 +236,11 @@
       <workItem from="1635839110162" duration="1223000" />
       <workItem from="1635846422811" duration="1054000" />
       <workItem from="1635854677333" duration="2390000" />
-      <workItem from="1635857108472" duration="4501000" />
+      <workItem from="1635857108472" duration="4895000" />
+      <workItem from="1635862504523" duration="389000" />
+      <workItem from="1636098104413" duration="727000" />
+      <workItem from="1636271546522" duration="4224000" />
+      <workItem from="1636381539333" duration="4812000" />
     </task>
     <servers />
   </component>

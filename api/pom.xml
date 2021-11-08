@@ -16,14 +16,6 @@
             <artifactId>kumuluzee-rest-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.kumuluz.ee.openapi</groupId>
-            <artifactId>kumuluzee-openapi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.kumuluz.ee.openapi</groupId>
-            <artifactId>kumuluzee-openapi-ui</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.kumuluz.ee.cors</groupId>
             <artifactId>kumuluzee-cors</artifactId>
         </dependency>
