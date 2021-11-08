@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eff32e0-c6e4-44b0-9722-972f61338a19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/classgraph-4.6.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/commons-lang3-3.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-dataformat-csv-2.9.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-dataformat-yaml-2.9.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-datatype-jdk8-2.9.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-health-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-openapi-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-openapi-ui-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/microprofile-health-api-2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/models-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/lib/models-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/org.osgi.annotation.versioning-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/services-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/lib/services-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-annotations-2.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-core-2.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-integration-2.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-jaxrs2-2.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-models-2.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/models/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/models/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/target/models-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/models/target/models-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/target/services-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/services/target/services-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +213,7 @@
       <workItem from="1635862504523" duration="389000" />
       <workItem from="1636098104413" duration="727000" />
       <workItem from="1636271546522" duration="4224000" />
-      <workItem from="1636381539333" duration="4812000" />
+      <workItem from="1636381539333" duration="5674000" />
     </task>
     <servers />
   </component>
