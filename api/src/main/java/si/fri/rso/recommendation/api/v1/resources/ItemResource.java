@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;*/
 import si.fri.rso.recommendation.models.Item;
 import si.fri.rso.recommendation.services.beans.ItemBean;
+import si.fri.rso.recommendation.services.config.RestProperties;
 
 
 import javax.annotation.PostConstruct;
@@ -22,6 +23,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
+import java.util.logging.Logger;
 
 @ApplicationScoped
 @Path("items")
@@ -32,8 +34,13 @@ public class ItemResource {
     private Client httpClient;
     private String baseUrl;
 
+    private Logger logger=Logger.getLogger(ItemResource.class.getName());
+
     @Inject
     private ItemBean itemBean;
+
+    @Inject
+    private RestProperties restProperties;
 
 
     @PostConstruct
@@ -53,6 +60,9 @@ public class ItemResource {
     @GET
     public Response getItems(){
         List items = itemBean.getItems();
+
+        logger.info(restProperties.getTestConfig());
+        logger.info(System.getenv().get("test-config"));
 
         return Response.ok(items).header("X - total count", items.size()).build();
     }

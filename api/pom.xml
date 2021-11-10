@@ -12,6 +12,10 @@
 
     <dependencies>
         <dependency>
+            <artifactId>kumuluzee-config-consul</artifactId>
+            <groupId>com.kumuluz.ee.config</groupId>
+        </dependency>
+        <dependency>
             <groupId>com.kumuluz.ee.rest</groupId>
             <artifactId>kumuluzee-rest-core</artifactId>
         </dependency>
