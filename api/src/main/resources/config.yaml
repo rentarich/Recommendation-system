@@ -12,7 +12,7 @@ kumuluzee:
     - jndi-name: jdbc/ItemDS
       connection-url: jdbc:postgresql://fanny.db.elephantsql.com:5432/sewztpca
       username: sewztpca
-      password: HpD_9pw4_XJl2DznXJOFQNX0d9Zkcgv6
+      password: jviqrny5vLJYogFEeyBhAr7daifOAiwB
       max-pool-size: 20
 rest-properties:
   test-config: test01

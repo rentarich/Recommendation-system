@@ -77,7 +77,16 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/k8s" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ninav\Desktop\FRI\BMA\1.letnik\1.semester\RSO\Recommendation-system\k8s" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -103,7 +112,7 @@
       <updated>1636475366122</updated>
       <workItem from="1636475369239" duration="4120000" />
       <workItem from="1636553595371" duration="4300000" />
-      <workItem from="1636613879950" duration="2285000" />
+      <workItem from="1636613879950" duration="5897000" />
     </task>
     <servers />
   </component>
