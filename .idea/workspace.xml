@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="37ece75e-5a3c-4471-894f-a1cb6d8b5ae5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/recommendation-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/recommendation-deployment.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +113,7 @@
       <updated>1636475366122</updated>
       <workItem from="1636475369239" duration="4120000" />
       <workItem from="1636553595371" duration="4300000" />
-      <workItem from="1636613879950" duration="5897000" />
+      <workItem from="1636613879950" duration="8107000" />
     </task>
     <servers />
   </component>

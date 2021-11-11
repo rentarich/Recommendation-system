@@ -17,3 +17,19 @@
 4. copy config path from terminal
 5. set new value
 6. test
+
+### K8S
+1. install [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)
+2. open cmd
+2. ```az aks install-cli```
+3. ```az login```
+4. ```az aks get-credentials --resource-group Rentarich_group --name Rentarich```
+5. ```kubectl get nodes```
+6. cd to your kubernetes deployment.yaml
+7. ```kubectl create -f recommendation-deployment.yaml```
+8. ```kubectl apply -f recommendation-deployment.yaml```
+9. ```kubectl get services ```
+10. ```kubectl get deployments```
+11. ```kubectl get pods```
+12. ```kubectl logs recommendation-deployment-7d6b4b5c7d-qqn9v```
+13. ```kubectl delete pod [image name]``` (same as above)
