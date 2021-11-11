@@ -28,8 +28,14 @@
 6. cd to your kubernetes deployment.yaml
 7. ```kubectl create -f recommendation-deployment.yaml```
 8. ```kubectl apply -f recommendation-deployment.yaml```
-9. ```kubectl get services ```
-10. ```kubectl get deployments```
-11. ```kubectl get pods```
-12. ```kubectl logs recommendation-deployment-7d6b4b5c7d-qqn9v```
-13. ```kubectl delete pod [image name]``` (same as above)
+9. ```kubectl get services```
+10.  EXTERNAL-IP:[PORT]/[REST path] in browser
+
+```bash
+kubectl get services
+kubectl get deployments
+kubectl get pods
+kubectl logs recommendation-deployment-7d6b4b5c7d-qqn9v
+kubectl delete pod [image name]
+``` 
+(same as above)
