@@ -4,15 +4,17 @@ kumuluzee:
   env:
     name: dev
   server:
-    base-url: http://localhost:3334/v1/recommendation
-    #base-url: http://prpo-priporocilni-sistem-prpo-priporocilni-sistem.apps.us-west-1.starter.openshift-online.com/v1/priporocila
     http:
       port: 3333
   datasources:
     - jndi-name: jdbc/ItemDS
-      connection-url: jdbc:postgresql://fanny.db.elephantsql.com:5432/sewztpca
-      username: sewztpca
-      password: jviqrny5vLJYogFEeyBhAr7daifOAiwB
+      connection-url: jdbc:postgresql://localhost:5432/rentarich
+      #connection-url: jdbc:postgresql://database:5432/rentarich
+      #connection-url: jdbc:postgresql://fanny.db.elephantsql.com:5432/sewztpca
+      #username: sewztpca
+      #password: jviqrny5vLJYogFEeyBhAr7daifOAiwB
+      username: postgres
+      password: postgres
       max-pool-size: 20
 rest-properties:
   test-config: test01

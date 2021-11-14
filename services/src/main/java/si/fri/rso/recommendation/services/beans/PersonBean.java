@@ -1,6 +1,5 @@
 package si.fri.rso.recommendation.services.beans;
 
-import si.fri.rso.recommendation.models.Item;
 import si.fri.rso.recommendation.models.Person;
 
 import javax.annotation.PostConstruct;
@@ -12,34 +11,33 @@ import java.util.List;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-
 @ApplicationScoped
-public class ItemBean {
-    private Logger log = Logger.getLogger(ItemBean.class.getName());
+public class PersonBean {
+
+    private Logger log = Logger.getLogger(PersonBean.class.getName());
     private String idBean;
 
     @PostConstruct
     private void init(){
         idBean = UUID.randomUUID().toString();
-        log.info("Init bean: " + ItemBean.class.getSimpleName() + " idBean: " + idBean);
+        log.info("Init bean: " + PersonBean.class.getSimpleName() + " idBean: " + idBean);
     }
 
     @PreDestroy
     private void destroy(){
-        log.info("Deinit bean: " + ItemBean.class.getSimpleName() + " idBean: " + idBean);
+        log.info("Deinit bean: " + PersonBean.class.getSimpleName() + " idBean: " + idBean);
     }
 
     @PersistenceContext(unitName = "item-jpa")
     private EntityManager em;
 
-    public List getItems(){
+    public List getPersons(){
 
-        return em.createNamedQuery("Item.getAll").getResultList();
+        return em.createNamedQuery("Person.getAll").getResultList();
     }
 
-    public Item getItem(int id) {
-        Item item = em.find(Item.class, id);
-        return item;
+    public Person getPerson(int id) {
+        Person person = em.find(Person.class, id);
+        return person;
     }
 }
-

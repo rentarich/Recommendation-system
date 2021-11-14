@@ -1,5 +1,8 @@
 # Ukazi
 
+## MS 
+```http://localhost:3333/v1/recommendation/{personId}```
+
 ## RUN IN DOCKER NETWORK:
 ### MS: 
 ```docker run --network rentarich-network -d --name recommendation -p 3333:3333 bc29cb71f5c2 -e test-config=test02```
