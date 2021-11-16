@@ -5,13 +5,13 @@
 
 ## RUN IN DOCKER NETWORK:
 ### MS: 
-```docker run --network rentarich-network -d --name recommendation -p 3333:3333 bc29cb71f5c2 -e test-config=test02```
+```docker run --network rentarich-network -d --name recommendation -p 3333:3333 bc29cb71f5c2 -e broken=true```
 
 ### BAZA: 
 ``` docker run --network rentarich-network -d --name database -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=rentarich -p 5432:5432 postgres:13```
 
 ### Docker config:
-```add to docker run: -e test-config=test02```
+```add to docker run: -e broken=true```
 
 ### Consul:
 1. run ```consul agent -dev```
@@ -42,3 +42,6 @@ kubectl logs recommendation-deployment-7d6b4b5c7d-qqn9v
 kubectl delete pod [image name]
 ``` 
 (same as above)
+
+### HEALTH
+``` http://localhost:3333/health/live``` 

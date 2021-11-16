@@ -9,14 +9,25 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class RestProperties {
 
-    @ConfigValue(value="test-config",watch = true)
-    private String testConfig;
+    @ConfigValue(value="maintenance-mode",watch = true)
+    private Boolean maintenanceMode;
 
-    public String getTestConfig() {
-        return testConfig;
+    @ConfigValue(value="broken",watch = true)
+    private Boolean broken;
+
+    public Boolean getMaintenanceMode() {
+        return this.maintenanceMode;
     }
 
-    public void setTestConfig(String testConfig) {
-        this.testConfig = testConfig;
+    public void setMaintenanceMode(final Boolean maintenanceMode) {
+        this.maintenanceMode = maintenanceMode;
+    }
+
+    public Boolean getBroken() {
+        return broken;
+    }
+
+    public void setBroken(final Boolean broken) {
+        this.broken = broken;
     }
 }

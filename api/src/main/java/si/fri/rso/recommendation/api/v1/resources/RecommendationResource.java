@@ -44,8 +44,8 @@ public class RecommendationResource {
     public Response getRecommendation(@PathParam("id") int personId){
         List<Item> items = manageBorrowBean.getRecommendation(personId);
 
-        logger.info(restProperties.getTestConfig());
-        logger.info(System.getenv().get("test-config"));
+        logger.info(restProperties.getBroken().toString());
+        logger.info(System.getenv().get("broken"));
 
         return Response.ok(items).header("X - total count", items.size()).build();
     }

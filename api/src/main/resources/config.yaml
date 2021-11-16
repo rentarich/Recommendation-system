@@ -16,5 +16,16 @@ kumuluzee:
       username: postgres
       password: postgres
       max-pool-size: 20
+  health:
+    checks:
+      data-source-health-check:
+        type: liveness
+        jndi-name: jdbc/ItemDS
+  metrics:
+    web-instrumentation:
+      - name: recommendation-endpoint
+        url-pattern: /v1/recommendation/*
+        
 rest-properties:
-  test-config: test01
+  maintenance-mode: false
+  broken: false

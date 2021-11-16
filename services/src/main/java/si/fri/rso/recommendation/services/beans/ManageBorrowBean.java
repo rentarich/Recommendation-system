@@ -1,5 +1,5 @@
 package si.fri.rso.recommendation.services.beans;
-
+import org.eclipse.microprofile.metrics.annotation.Timed;
 import si.fri.rso.recommendation.models.Borrow;
 import si.fri.rso.recommendation.models.Item;
 import si.fri.rso.recommendation.models.Person;
@@ -14,6 +14,7 @@ import java.io.Serializable;
 import java.util.*;
 import java.util.logging.Logger;
 
+@Timed
 @ApplicationScoped
 public class ManageBorrowBean {
 
