@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37ece75e-5a3c-4471-894f-a1cb6d8b5ae5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/health/CustomHealthCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/resources/DemoResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/resources/RecommendationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/resources/RecommendationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/recommendation-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/recommendation-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/beans/ManageBorrowBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/beans/ManageBorrowBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/config/RestProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/config/RestProperties.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +89,7 @@
       <workItem from="1636808866464" duration="952000" />
       <workItem from="1636884777339" duration="12306000" />
       <workItem from="1637055185725" duration="997000" />
-      <workItem from="1637067461358" duration="4985000" />
+      <workItem from="1637067461358" duration="5049000" />
     </task>
     <servers />
   </component>

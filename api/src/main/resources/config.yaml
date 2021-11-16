@@ -25,7 +25,7 @@ kumuluzee:
     web-instrumentation:
       - name: recommendation-endpoint
         url-pattern: /v1/recommendation/*
-        
+
 rest-properties:
   maintenance-mode: false
   broken: false
