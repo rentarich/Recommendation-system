@@ -22,9 +22,10 @@ kumuluzee:
         type: liveness
         jndi-name: jdbc/ItemDS
   metrics:
-    web-instrumentation:
-      - name: recommendation-endpoint
-        url-pattern: /v1/recommendation/*
+    servlet:
+      enabled: true
+      mapping: /metrics
+
 
 rest-properties:
   maintenance-mode: false

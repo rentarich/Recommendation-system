@@ -14,8 +14,8 @@ import java.io.Serializable;
 import java.util.*;
 import java.util.logging.Logger;
 
-@Timed
 @ApplicationScoped
+@Timed(name = "ManageBorrowBean")
 public class ManageBorrowBean {
 
     @Inject

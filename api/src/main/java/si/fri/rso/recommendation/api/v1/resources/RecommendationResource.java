@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @ApplicationScoped
-@Path("recommendation")
+@Path("person")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class RecommendationResource {
@@ -40,7 +40,7 @@ public class RecommendationResource {
     }
 
     @GET
-    @Path("{id}")
+    @Path("{id}/recommend")
     public Response getRecommendation(@PathParam("id") int personId){
         List<Item> items = manageBorrowBean.getRecommendation(personId);
 

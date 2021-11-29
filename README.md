@@ -1,7 +1,7 @@
 # Ukazi
 
 ## MS 
-```http://localhost:3333/v1/recommendation/{personId}```
+```http://localhost:3333/v1/person/{personId}/recommend```
 
 ## RUN IN DOCKER NETWORK:
 ### MS: 
@@ -41,7 +41,11 @@ kubectl get pods
 kubectl logs recommendation-deployment-7d6b4b5c7d-qqn9v
 kubectl delete pod [image name]
 ``` 
-(same as above)
 
 ### HEALTH
 ``` http://localhost:3333/health/live``` 
+
+### METRICS
+``` http://localhost:3333/metrics``` 
+
+header ```Accept: application/json```
