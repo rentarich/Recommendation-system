@@ -1,4 +1,7 @@
 package si.fri.rso.recommendation.services.beans;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 import si.fri.rso.recommendation.models.Borrow;
 import si.fri.rso.recommendation.models.Item;
@@ -13,6 +16,8 @@ import javax.persistence.PersistenceContext;
 import java.io.Serializable;
 import java.util.*;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @ApplicationScoped
 @Timed(name = "ManageBorrowBean")
@@ -42,7 +47,7 @@ public class ManageBorrowBean {
     @PersistenceContext(unitName = "item-jpa")
     private EntityManager em;
 
-    public List<Item> getRecommendation(int personId){
+    public List<Item> getRecommendation(int personId) throws UnirestException {
         Person person=personBean.getPerson(personId);
         List<Borrow> borrows=borrowBean.getPersonsBorrows(person);
 
@@ -55,20 +60,44 @@ public class ManageBorrowBean {
     }
 
 
-    private List<Item> sortCatalog(List<String> categories){
+    private List<Item> sortCatalog(List<String> categories) throws UnirestException {
         String mostCommonCategory=mostCommon(categories);
 
         List<Item> items=itemBean.getItems();
+        List<Float> matches=new ArrayList<>();
 
-        int ixSorted=0;
-        for(int i=0;i<items.size();i++){
+        for(int i=0;i<items.size();i++) {
             Item item=items.get(i);
-            if(item.getCategory().equals(mostCommonCategory)){
-                Item tempItem=items.get(ixSorted);
-                items.set(ixSorted,item);
-                items.set(i,tempItem);
+            String itemCategory=item.getCategory().replaceAll("\\s+","%20");
 
-                ixSorted++;
+            String url="https://text-similarity-calculator.p.rapidapi.com/stringcalculator.php?ftext="+mostCommonCategory+"&stext="+itemCategory;
+            HttpResponse<String> response = (HttpResponse<String>) Unirest.get(url)
+                    .header("x-rapidapi-host", "text-similarity-calculator.p.rapidapi.com")
+                    .header("x-rapidapi-key", "85bf59bff4msh767705b762b415bp15a380jsn9dfd0e4d08ea")
+                    .asString();
+
+            String responseBody=response.getBody();
+            Pattern pattern = Pattern.compile("\\d+\\.?\\d*");
+            Matcher matcher = pattern.matcher(responseBody);
+            float match=0;
+            if (matcher.find())
+            {
+                match=Float.parseFloat(matcher.group(0));
+            }
+            matches.add(match);
+        }
+
+        for(int i=0; i < matches.size(); i++){
+            for(int j=1; j < (matches.size()-i); j++){
+                if(matches.get(j-1) < matches.get(j)){
+                    Item tempItem=items.get(j-1);
+                    items.set(j-1,items.get(j));
+                    items.set(j,tempItem);
+
+                    float tempFloat=matches.get(j-1);
+                    matches.set(j-1,matches.get(j));
+                    matches.set(j,tempFloat);
+                }
             }
         }
         return items;

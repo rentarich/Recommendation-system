@@ -15,7 +15,7 @@ kumuluzee:
       password: jviqrny5vLJYogFEeyBhAr7daifOAiwB
       #username: postgres
       #password: postgres
-      max-pool-size: 20
+      max-pool-size: 1
   health:
     checks:
       data-source-health-check:

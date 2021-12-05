@@ -1,5 +1,6 @@
 package si.fri.rso.recommendation.api.v1.resources;
 
+import com.mashape.unirest.http.exceptions.UnirestException;
 import si.fri.rso.recommendation.models.Item;
 import si.fri.rso.recommendation.services.beans.ManageBorrowBean;
 import si.fri.rso.recommendation.services.config.RestProperties;
@@ -41,11 +42,12 @@ public class RecommendationResource {
 
     @GET
     @Path("{id}/recommend")
-    public Response getRecommendation(@PathParam("id") int personId){
-        List<Item> items = manageBorrowBean.getRecommendation(personId);
+    public Response getRecommendation(@PathParam("id") int personId) throws UnirestException {
 
-        logger.info(restProperties.getBroken().toString());
-        logger.info(System.getenv().get("broken"));
+        // logger.info(restProperties.getBroken().toString());
+        // logger.info(System.getenv().get("broken"));
+
+        List<Item> items = manageBorrowBean.getRecommendation(personId);
 
         return Response.ok(items).header("X - total count", items.size()).build();
     }
