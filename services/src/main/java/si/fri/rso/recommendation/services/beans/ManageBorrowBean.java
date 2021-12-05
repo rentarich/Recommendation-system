@@ -2,6 +2,8 @@ package si.fri.rso.recommendation.services.beans;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import org.eclipse.microprofile.metrics.annotation.Counted;
+import org.eclipse.microprofile.metrics.annotation.Metric;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 import si.fri.rso.recommendation.models.Borrow;
 import si.fri.rso.recommendation.models.Item;
@@ -60,6 +62,7 @@ public class ManageBorrowBean {
     }
 
 
+    @Counted(name = "sortCatalog")
     private List<Item> sortCatalog(List<String> categories) throws UnirestException {
         String mostCommonCategory=mostCommon(categories);
 
