@@ -64,7 +64,7 @@ public class ManageBorrowBean {
 
     @Counted(name = "sortCatalog")
     private List<Item> sortCatalog(List<String> categories) throws UnirestException {
-        String mostCommonCategory=mostCommon(categories);
+        String mostCommonCategory=mostCommon(categories).replaceAll("\\s+","%20");
 
         List<Item> items=itemBean.getItems();
         List<Float> matches=new ArrayList<>();
@@ -72,11 +72,11 @@ public class ManageBorrowBean {
         for(int i=0;i<items.size();i++) {
             Item item=items.get(i);
             String itemCategory=item.getCategory().replaceAll("\\s+","%20");
-
+            String rapidAPIkey = System.getenv("rapid-api-key");
             String url="https://text-similarity-calculator.p.rapidapi.com/stringcalculator.php?ftext="+mostCommonCategory+"&stext="+itemCategory;
             HttpResponse<String> response = (HttpResponse<String>) Unirest.get(url)
                     .header("x-rapidapi-host", "text-similarity-calculator.p.rapidapi.com")
-                    .header("x-rapidapi-key", "85bf59bff4msh767705b762b415bp15a380jsn9dfd0e4d08ea")
+                    .header("x-rapidapi-key", rapidAPIkey)
                     .asString();
 
             String responseBody=response.getBody();
