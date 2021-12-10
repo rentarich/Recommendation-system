@@ -69,25 +69,30 @@ public class ManageBorrowBean {
         List<Item> items=itemBean.getItems();
         List<Float> matches=new ArrayList<>();
 
+        float n=items.size();
         for(int i=0;i<items.size();i++) {
             Item item=items.get(i);
             String itemCategory=item.getCategory().replaceAll("\\s+","%20");
-            String rapidAPIkey = System.getenv("rapid-api-key");
+            //String rapidAPIkey = System.getenv("rapid-api-key");
             String url="https://text-similarity-calculator.p.rapidapi.com/stringcalculator.php?ftext="+mostCommonCategory+"&stext="+itemCategory;
-            HttpResponse<String> response = (HttpResponse<String>) Unirest.get(url)
-                    .header("x-rapidapi-host", "text-similarity-calculator.p.rapidapi.com")
-                    .header("x-rapidapi-key", rapidAPIkey)
-                    .asString();
+            float matchScore = 0;
+            try {
+                HttpResponse<String> response = (HttpResponse<String>) Unirest.get(url)
+                        .header("x-rapidapi-host", "text-similarity-calculator.p.rapidapi.com")
+                        .header("x-rapidapi-key", "85bf59bff4msh767705b762b415bp15a380jsn9dfd0e4d08ea")
+                        .asString();
 
-            String responseBody=response.getBody();
-            Pattern pattern = Pattern.compile("\\d+\\.?\\d*");
-            Matcher matcher = pattern.matcher(responseBody);
-            float match=0;
-            if (matcher.find())
-            {
-                match=Float.parseFloat(matcher.group(0));
+                String responseBody = response.getBody();
+                Pattern pattern = Pattern.compile("\\d+\\.?\\d*");
+                Matcher matcher = pattern.matcher(responseBody);
+                if (matcher.find()) {
+                    matchScore = Float.parseFloat(matcher.group(0));
+                }
             }
-            matches.add(match);
+            catch (Exception e){
+                matchScore=n-i;
+            }
+            matches.add(matchScore);
         }
 
         for(int i=0; i < matches.size(); i++){

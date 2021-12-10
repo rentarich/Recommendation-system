@@ -4,6 +4,7 @@
     <list default="true" id="37ece75e-5a3c-4471-894f-a1cb6d8b5ae5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/recommendation-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/recommendation-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/beans/ManageBorrowBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/beans/ManageBorrowBean.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +103,7 @@
       <workItem from="1638344123430" duration="939000" />
       <workItem from="1638712607817" duration="8046000" />
       <workItem from="1638722827539" duration="984000" />
-      <workItem from="1639131160474" duration="4258000" />
+      <workItem from="1639131160474" duration="5673000" />
     </task>
     <servers />
   </component>
