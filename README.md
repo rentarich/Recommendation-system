@@ -3,7 +3,7 @@
 http://20.102.34.64/recommendation/v1/persons/1/recommend
 
 ## MS 
-```http://localhost:3333/v1/person/{personId}/recommend```
+```http://localhost:3333/v1/persons/{personId}/recommend```
 
 ## RUN IN DOCKER NETWORK:
 ### MS: 

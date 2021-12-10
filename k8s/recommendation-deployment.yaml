@@ -13,7 +13,7 @@ spec:
         app: recommendation
     spec:
       containers:
-        - image: ninavelikajne/recommendation-system:2021-12-05-23-49-22
+        - image: ninavelikajne/recommendation-system:2021-12-10-18-27-49
           name: recommendation
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL

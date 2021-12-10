@@ -25,6 +25,12 @@ public class Borrow {
     @Column(name = "to_date")
     private Date to_date;
 
+    @Column(name= "reserved")
+    private boolean reserved;
+
+    @Column(name = "returned")
+    private boolean returned;
+
     @JsonbTransient
     @ManyToOne
     @JoinColumn(name = "id_person")
