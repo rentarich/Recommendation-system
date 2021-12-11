@@ -13,8 +13,10 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -26,6 +28,9 @@ public class PersonResource {
 
     private Client httpClient;
     private String baseUrl;
+
+    @Context
+    protected UriInfo uriInfo;
 
     private Logger logger=Logger.getLogger(PersonResource.class.getName());
 
@@ -48,8 +53,8 @@ public class PersonResource {
 
         // logger.info(restProperties.getBroken().toString());
         // logger.info(System.getenv().get("broken"));
-
-        List<Item> items = manageBorrowBean.getRecommendation(personId);
+        
+        List<Item> items = manageBorrowBean.getRecommendation(personId,uriInfo);
 
         return Response.ok(items).header("X - total count", items.size()).build();
     }

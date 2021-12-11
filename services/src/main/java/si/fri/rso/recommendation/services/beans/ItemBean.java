@@ -2,7 +2,6 @@ package si.fri.rso.recommendation.services.beans;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
-import si.fri.rso.recommendation.models.converters.ItemConverter;
 import si.fri.rso.recommendation.models.models.Item;
 
 import javax.annotation.PostConstruct;

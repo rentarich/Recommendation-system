@@ -32,9 +32,6 @@ public class ManageBorrowBean {
     @Inject
     private PersonBean personBean;
 
-    @Context
-    protected UriInfo uriInfo;
-
     private Logger log = Logger.getLogger(ManageBorrowBean.class.getName());
     private String idBean;
 
@@ -52,7 +49,7 @@ public class ManageBorrowBean {
     @PersistenceContext(unitName = "item-jpa")
     private EntityManager em;
 
-    public List<Item> getRecommendation(int personId) throws UnirestException {
+    public List<Item> getRecommendation(int personId,UriInfo uriInfo) throws UnirestException {
         Person person=personBean.getPerson(personId);
         List<Borrow> borrows=borrowBean.getPersonsBorrows(person);
 
@@ -61,12 +58,12 @@ public class ManageBorrowBean {
         borrows.forEach(b -> categories.add(itemBean.getItem(b.getItem().getId()).getCategory()));
 
 
-        return sortCatalog(categories);
+        return sortCatalog(categories,uriInfo);
     }
 
 
     @Counted(name = "sortCatalog")
-    private List<Item> sortCatalog(List<String> categories) throws UnirestException {
+    private List<Item> sortCatalog(List<String> categories,UriInfo uriInfo) throws UnirestException {
         String mostCommonCategory=mostCommon(categories).replaceAll("\\s+","%20");
 
         List<Item> items=itemBean.getAvailableItemsFilter(uriInfo);

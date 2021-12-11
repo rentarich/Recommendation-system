@@ -2,6 +2,8 @@
 
 http://20.102.34.64/recommendation/v1/persons/1/recommend
 
+- filter, pagination, sorting, partial responses (**REQUIRED** category field)
+
 ## MS 
 ```http://localhost:3333/v1/persons/{personId}/recommend```
 
