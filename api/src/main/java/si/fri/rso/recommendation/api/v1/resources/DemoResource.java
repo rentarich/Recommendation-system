@@ -1,14 +1,13 @@
 package si.fri.rso.recommendation.api.v1.resources;
 
 
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.Unirest;
 import si.fri.rso.recommendation.services.config.RestProperties;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.logging.Logger;
@@ -24,11 +23,22 @@ public class DemoResource {
     @Inject
     private RestProperties restProperties;
 
-    @POST
+    @GET
     @Path("break")
     public Response makeUnhealthy() {
 
-        restProperties.setBroken(true);
+        // restProperties.setBroken(true);
+        String baseUrl = "http://20.81.75.78:3333/v1/persons/1/recommend";
+
+        log.info("gremo");
+        try {
+            HttpResponse<String> response = Unirest.get("http://20.81.75.78:3333/v1/persons/1/recommend")
+                    .asString();
+            log.info(response.getBody());
+        }
+        catch (Exception e){
+            log.info(e.toString());
+        }
 
         return Response.status(Response.Status.OK).build();
     }

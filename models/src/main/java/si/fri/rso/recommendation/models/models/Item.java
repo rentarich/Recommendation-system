@@ -1,4 +1,4 @@
-package si.fri.rso.recommendation.models;
+package si.fri.rso.recommendation.models.models;
 
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;

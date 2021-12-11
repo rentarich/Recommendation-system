@@ -1,4 +1,4 @@
-package si.fri.rso.recommendation.models;
+package si.fri.rso.recommendation.models.models;
 
 import javax.persistence.*;
 import java.util.List;

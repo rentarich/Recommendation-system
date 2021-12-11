@@ -1,6 +1,6 @@
 package si.fri.rso.recommendation.services.beans;
 
-import si.fri.rso.recommendation.models.Person;
+import si.fri.rso.recommendation.models.models.Person;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

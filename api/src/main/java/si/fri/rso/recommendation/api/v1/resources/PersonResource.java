@@ -2,7 +2,7 @@ package si.fri.rso.recommendation.api.v1.resources;
 
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.eclipse.microprofile.metrics.annotation.Metered;
-import si.fri.rso.recommendation.models.Item;
+import si.fri.rso.recommendation.models.models.Item;
 import si.fri.rso.recommendation.services.beans.ManageBorrowBean;
 import si.fri.rso.recommendation.services.config.RestProperties;
 
@@ -22,12 +22,12 @@ import java.util.logging.Logger;
 @Path("persons")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class RecommendationResource {
+public class PersonResource {
 
     private Client httpClient;
     private String baseUrl;
 
-    private Logger logger=Logger.getLogger(RecommendationResource.class.getName());
+    private Logger logger=Logger.getLogger(PersonResource.class.getName());
 
     @Inject
     private ManageBorrowBean manageBorrowBean;

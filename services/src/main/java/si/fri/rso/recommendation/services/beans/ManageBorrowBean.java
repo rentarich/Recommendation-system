@@ -3,11 +3,10 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.eclipse.microprofile.metrics.annotation.Counted;
-import org.eclipse.microprofile.metrics.annotation.Metric;
 import org.eclipse.microprofile.metrics.annotation.Timed;
-import si.fri.rso.recommendation.models.Borrow;
-import si.fri.rso.recommendation.models.Item;
-import si.fri.rso.recommendation.models.Person;
+import si.fri.rso.recommendation.models.models.Borrow;
+import si.fri.rso.recommendation.models.models.Item;
+import si.fri.rso.recommendation.models.models.Person;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -15,7 +14,8 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.io.Serializable;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.UriInfo;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -31,6 +31,9 @@ public class ManageBorrowBean {
     private ItemBean itemBean;
     @Inject
     private PersonBean personBean;
+
+    @Context
+    protected UriInfo uriInfo;
 
     private Logger log = Logger.getLogger(ManageBorrowBean.class.getName());
     private String idBean;
@@ -66,7 +69,7 @@ public class ManageBorrowBean {
     private List<Item> sortCatalog(List<String> categories) throws UnirestException {
         String mostCommonCategory=mostCommon(categories).replaceAll("\\s+","%20");
 
-        List<Item> items=itemBean.getItems();
+        List<Item> items=itemBean.getAvailableItemsFilter(uriInfo);
         List<Float> matches=new ArrayList<>();
 
         float n=items.size();

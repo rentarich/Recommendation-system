@@ -3,9 +3,9 @@
     <persistence-unit name="item-jpa" transaction-type="JTA">
         <jta-data-source>jdbc/ItemDS</jta-data-source>
 
-        <class>si.fri.rso.recommendation.models.Item</class>
-        <class>si.fri.rso.recommendation.models.Person</class>
-        <class>si.fri.rso.recommendation.models.Borrow</class>
+        <class>si.fri.rso.recommendation.models.models.Item</class>
+        <class>si.fri.rso.recommendation.models.models.Person</class>
+        <class>si.fri.rso.recommendation.models.models.Borrow</class>
 
 
         <properties>

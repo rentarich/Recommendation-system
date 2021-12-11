@@ -1,17 +1,16 @@
-package si.fri.rso.recommendation.models;
+package si.fri.rso.recommendation.models.models;
 
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name="borrow")
 @NamedQueries(value =
         {
                 @NamedQuery(name = "Borrow.getAll", query = "SELECT b FROM Borrow b"),
-                @NamedQuery(name = "Borrow.getBorrowForPerson", query = "SELECT b FROM Borrow b WHERE b.person = :person")
-
+                @NamedQuery(name = "Borrow.getBorrowForPerson", query = "SELECT b FROM Borrow b WHERE b.person = :person"),
+                @NamedQuery(name = "Borrow.getReservedOrBorrowedItems", query = "SELECT b FROM Borrow b WHERE b.reserved = true OR b.returned=false")
         })
 public class Borrow {
 
