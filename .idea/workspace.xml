@@ -4,10 +4,12 @@
     <list default="true" id="37ece75e-5a3c-4471-894f-a1cb6d8b5ae5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/RecommendationSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/RecommendationSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/resources/DemoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/resources/DemoResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/resources/PersonResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/recommendation/api/v1/resources/PersonResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/beans/ItemBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/beans/ItemBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/beans/ManageBorrowBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/recommendation/services/beans/ManageBorrowBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -31,7 +31,7 @@
         <kumuluzee-metrics.version>2.3.0</kumuluzee-metrics.version>
         <kumuluzee-config-mp.version>1.4.1</kumuluzee-config-mp.version>
         <unirest-java.version>1.4.9</unirest-java.version>
-
+        <kumuluzee-openapi.version>1.0.1</kumuluzee-openapi.version>
         <postgresql.version>42.3.0</postgresql.version>
     </properties>
 
@@ -41,6 +41,17 @@
                 <groupId>com.kumuluz.ee.health</groupId>
                 <artifactId>kumuluzee-health</artifactId>
                 <version>${kumuluzee-health.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kumuluz.ee.openapi</groupId>
+                <artifactId>kumuluzee-openapi</artifactId>
+                <version>${kumuluzee-openapi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.kumuluz.ee.openapi</groupId>
+                <artifactId>kumuluzee-openapi-ui</artifactId>
+                <version>${kumuluzee-openapi.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kumuluz.ee.metrics</groupId>
@@ -61,11 +72,6 @@
                 <groupId>com.kumuluz.ee.cors</groupId>
                 <artifactId>kumuluzee-cors</artifactId>
                 <version>${kumuluzee-cors.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.kumuluz.ee.openapi</groupId>
-                <artifactId>kumuluzee-openapi</artifactId>
-                <version>${kumuluzee-openapi.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kumuluz.ee</groupId>

@@ -1,6 +1,12 @@
 package si.fri.rso.recommendation.api.v1.resources;
 
 import com.mashape.unirest.http.exceptions.UnirestException;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.headers.Header;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.eclipse.microprofile.metrics.annotation.Metered;
 import si.fri.rso.recommendation.models.models.Item;
 import si.fri.rso.recommendation.services.beans.ManageBorrowBean;
@@ -47,16 +53,31 @@ public class PersonResource {
     }
 
     @GET
-    @Path("{id}/recommend")
+    @Operation(description = "Get list of all available items sorted on recommendation. Order of items is set based on similarity score calculated with third API based on most borrowed item category in history.", summary = "Get persons recommended items",
+            tags = "recommendation",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Got all recommended items for person {personId}.", content = @Content(
+                            array = @ArraySchema(schema = @Schema(implementation = Item.class))),
+                            headers = {@Header(name = "X-Total-Count", schema = @Schema(type = "integer"))}
+                    ),
+                    @ApiResponse(responseCode = "400",
+                            description = "Bad request."
+                    )})
+    @Path("{personId}/recommend")
     @Metered(name = "getRecommendation")
-    public Response getRecommendation(@PathParam("id") int personId) throws UnirestException {
+    public Response getRecommendation(@PathParam("personId") int personId) throws UnirestException {
 
         // logger.info(restProperties.getBroken().toString());
         // logger.info(System.getenv().get("broken"));
-        
-        List<Item> items = manageBorrowBean.getRecommendation(personId,uriInfo);
 
-        return Response.ok(items).header("X - total count", items.size()).build();
+        try {
+            List<Item> items = manageBorrowBean.getRecommendation(personId, uriInfo);
+            return Response.ok(items).header("X - total count", items.size()).build();
+        }
+        catch (Exception e){
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
     }
 
 }

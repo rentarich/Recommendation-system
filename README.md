@@ -60,3 +60,6 @@ kubectl get services --namespace ingress-basic
 kubectl apply -f <DEPL>.yaml --namespace ingress-basic
 kubectl apply -f .\K8S\ingres.yaml --namespace ingress-basic
 ``` 
+
+### OpenAPI
+http://localhost:3333/api-specs/ui
