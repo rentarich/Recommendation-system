@@ -1,5 +1,6 @@
 package si.fri.rso.recommendation.api.v1.resources;
 
+//import com.kumuluz.ee.logs.cdi.Log;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.headers.Header;
@@ -26,6 +27,7 @@ import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
+//@Log
 @ApplicationScoped
 @Path("persons")
 @Consumes(MediaType.APPLICATION_JSON)

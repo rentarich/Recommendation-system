@@ -63,3 +63,7 @@ kubectl apply -f .\K8S\ingres.yaml --namespace ingress-basic
 
 ### OpenAPI
 http://localhost:3333/api-specs/ui
+
+http://20.62.179.11/recommendation/api-specs/v1/openapi.json
+
+http://20.102.25.188:3333/api-specs/ui/?url=http://20.102.25.188:3333/api-specs/v1/openapi.json

@@ -33,10 +33,17 @@
         <unirest-java.version>1.4.9</unirest-java.version>
         <kumuluzee-openapi.version>1.0.1</kumuluzee-openapi.version>
         <postgresql.version>42.3.0</postgresql.version>
+        <kumuluzee-logs.version>1.4.2</kumuluzee-logs.version>
+        <swagger-annotations.version>2.0.7</swagger-annotations.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+<!--            <dependency>-->
+<!--                <artifactId>kumuluzee-logs-log4j2</artifactId>-->
+<!--                <groupId>com.kumuluz.ee.logs</groupId>-->
+<!--                <version>${kumuluzee-logs.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.kumuluz.ee.health</groupId>
                 <artifactId>kumuluzee-health</artifactId>
@@ -89,6 +96,11 @@
                 <groupId>com.kumuluz.ee.rest</groupId>
                 <artifactId>kumuluzee-rest-core</artifactId>
                 <version>${kumuluzee-rest.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kumuluz.ee.config</groupId>
