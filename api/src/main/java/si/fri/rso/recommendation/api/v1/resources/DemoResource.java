@@ -3,6 +3,13 @@ package si.fri.rso.recommendation.api.v1.resources;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.headers.Header;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import si.fri.rso.recommendation.models.models.Item;
 import si.fri.rso.recommendation.services.config.RestProperties;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -24,21 +31,15 @@ public class DemoResource {
     private RestProperties restProperties;
 
     @GET
+    @Operation(description = "Simulates broken connection to DB.", summary = "Simulates unhealthy MS.",
+            tags = "recommendation",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Simulation done."
+                    )})
     @Path("break")
     public Response makeUnhealthy() {
 
-        // restProperties.setBroken(true);
-        String baseUrl = "http://20.81.75.78:3333/v1/persons/1/recommend";
-
-        log.info("gremo");
-        try {
-            HttpResponse<String> response = Unirest.get("http://20.81.75.78:3333/v1/persons/1/recommend")
-                    .asString();
-            log.info(response.getBody());
-        }
-        catch (Exception e){
-            log.info(e.toString());
-        }
+        restProperties.setBroken(true);
 
         return Response.status(Response.Status.OK).build();
     }

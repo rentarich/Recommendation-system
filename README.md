@@ -25,6 +25,12 @@ http://20.102.34.64/recommendation/v1/persons/1/recommend
 5. set new value
 6. test
 
+#### Azure:
+```
+helm repo add hashicorp https://helm.releases.hashicorp.com
+helm upgrade --install azure hashicorp/consul -f consul-config.yaml
+```
+
 ### K8S
 1. install [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)
 2. open cmd
@@ -44,6 +50,7 @@ kubectl get deployments
 kubectl get pods
 kubectl logs recommendation-deployment-7d6b4b5c7d-qqn9v
 kubectl delete pod [image name]
+kubectl logs -f deployment/recommendation-deployment
 ``` 
 
 ### HEALTH

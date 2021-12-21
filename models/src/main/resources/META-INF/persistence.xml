@@ -5,6 +5,7 @@
 
         <class>si.fri.rso.recommendation.models.models.Item</class>
         <class>si.fri.rso.recommendation.models.models.Person</class>
+        <class>si.fri.rso.recommendation.models.models.Favourites</class>
         <class>si.fri.rso.recommendation.models.models.Borrow</class>
 
 
