@@ -11,13 +11,13 @@ spec:
   rules:
     - http:
         paths:
-          - path: /catalog(/|$)(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: catalog
-                port:
-                  number: 5555
+          #- path: /catalog(/|$)(.*)
+          #  pathType: Prefix
+          #  backend:
+          #    service:
+          #      name: catalog
+          #      port:
+          #        number: 5555
           - path: /recommendation(/|$)(.*)
             pathType: Prefix
             backend:
