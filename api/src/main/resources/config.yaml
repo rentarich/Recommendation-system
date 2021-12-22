@@ -28,6 +28,9 @@ kumuluzee:
   openapi:
     ui:
       enabled: true
+  config:
+    consul:
+      agent: http://20.62.179.11/consul
 #  logs:
 #    config-file: '<?xml version="1.0" encoding="UTF-8"?>
 #                            <Configuration name="comments">
