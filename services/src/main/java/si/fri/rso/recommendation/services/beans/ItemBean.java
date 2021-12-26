@@ -1,5 +1,6 @@
 package si.fri.rso.recommendation.services.beans;
 
+import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
 import si.fri.rso.recommendation.models.models.Item;
@@ -13,13 +14,13 @@ import javax.persistence.PersistenceContext;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.UUID;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 
 @ApplicationScoped
 public class ItemBean {
-    private Logger log = Logger.getLogger(ItemBean.class.getName());
+    private com.kumuluz.ee.logs.Logger logger = LogManager.getLogger(ItemBean.class.getName());
+
     private String idBean;
 
     @Inject
@@ -28,12 +29,12 @@ public class ItemBean {
     @PostConstruct
     private void init(){
         idBean = UUID.randomUUID().toString();
-        log.info("Init bean: " + ItemBean.class.getSimpleName() + " idBean: " + idBean);
+        logger.info("Init bean: " + ItemBean.class.getSimpleName() + " idBean: " + idBean);
     }
 
     @PreDestroy
     private void destroy(){
-        log.info("Deinit bean: " + ItemBean.class.getSimpleName() + " idBean: " + idBean);
+        logger.info("Deinit bean: " + ItemBean.class.getSimpleName() + " idBean: " + idBean);
     }
 
     @PersistenceContext(unitName = "item-jpa")

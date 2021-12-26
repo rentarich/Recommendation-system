@@ -1,4 +1,5 @@
 package si.fri.rso.recommendation.services.beans;
+import com.kumuluz.ee.logs.LogManager;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
@@ -14,10 +15,8 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import java.util.*;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -32,18 +31,18 @@ public class ManageBorrowBean {
     @Inject
     private PersonBean personBean;
 
-    private Logger log = Logger.getLogger(ManageBorrowBean.class.getName());
+    private com.kumuluz.ee.logs.Logger logger = LogManager.getLogger(ManageBorrowBean.class.getName());
     private String idBean;
 
     @PostConstruct
     private void init(){
         idBean = UUID.randomUUID().toString();
-        log.info("Init bean: " + ManageBorrowBean.class.getSimpleName() + " idBean: " + idBean);
+        logger.info("Init bean: " + ManageBorrowBean.class.getSimpleName() + " idBean: " + idBean);
     }
 
     @PreDestroy
     private void destroy(){
-        log.info("Deinit bean: " + ManageBorrowBean.class.getSimpleName() + " idBean: " + idBean);
+        logger.info("Deinit bean: " + ManageBorrowBean.class.getSimpleName() + " idBean: " + idBean);
     }
 
     @PersistenceContext(unitName = "item-jpa")

@@ -1,6 +1,7 @@
 package si.fri.rso.recommendation.api.v1.resources;
 
-//import com.kumuluz.ee.logs.cdi.Log;
+import com.kumuluz.ee.logs.LogManager;
+import com.kumuluz.ee.logs.cdi.Log;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.headers.Header;
@@ -27,7 +28,7 @@ import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
-//@Log
+@Log
 @ApplicationScoped
 @Path("persons")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -40,7 +41,7 @@ public class PersonResource {
     @Context
     protected UriInfo uriInfo;
 
-    private Logger logger=Logger.getLogger(PersonResource.class.getName());
+    private com.kumuluz.ee.logs.Logger logger= LogManager.getLogger(PersonResource.class.getName());
 
     @Inject
     private ManageBorrowBean manageBorrowBean;
@@ -74,9 +75,11 @@ public class PersonResource {
 
         try {
             List<Item> items = manageBorrowBean.getRecommendation(personId, uriInfo);
+            logger.info("Recommendation for person "+personId+" created.");
             return Response.ok(items).header("X - total count", items.size()).build();
         }
         catch (Exception e){
+            logger.info("Recommendation for person "+personId+" not created. BAD REQUEST.");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 

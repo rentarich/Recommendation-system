@@ -39,11 +39,11 @@
 
     <dependencyManagement>
         <dependencies>
-<!--            <dependency>-->
-<!--                <artifactId>kumuluzee-logs-log4j2</artifactId>-->
-<!--                <groupId>com.kumuluz.ee.logs</groupId>-->
-<!--                <version>${kumuluzee-logs.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <artifactId>kumuluzee-logs-log4j2</artifactId>
+                <groupId>com.kumuluz.ee.logs</groupId>
+                <version>${kumuluzee-logs.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.kumuluz.ee.health</groupId>
                 <artifactId>kumuluzee-health</artifactId>
@@ -102,11 +102,11 @@
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger-annotations.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.kumuluz.ee.config</groupId>
-                <artifactId>kumuluzee-config-consul</artifactId>
-                <version>${kumuluzee-config.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.kumuluz.ee.config</groupId>-->
+<!--                <artifactId>kumuluzee-config-consul</artifactId>-->
+<!--                <version>${kumuluzee-config.version}</version>-->
+<!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 

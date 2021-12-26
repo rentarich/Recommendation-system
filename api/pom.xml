@@ -11,15 +11,15 @@
     <artifactId>api</artifactId>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>com.kumuluz.ee.logs</groupId>-->
-<!--            <artifactId>kumuluzee-logs-common</artifactId>-->
-<!--            <version>1.4.2</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <artifactId>kumuluzee-logs-log4j2</artifactId>-->
-<!--            <groupId>com.kumuluz.ee.logs</groupId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.kumuluz.ee.logs</groupId>
+            <artifactId>kumuluzee-logs-common</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+        <dependency>
+            <artifactId>kumuluzee-logs-log4j2</artifactId>
+            <groupId>com.kumuluz.ee.logs</groupId>
+        </dependency>
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-core</artifactId>
@@ -40,10 +40,10 @@
             <groupId>com.kumuluz.ee.config</groupId>
             <artifactId>kumuluzee-config-mp</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.kumuluz.ee.config</groupId>
-            <artifactId>kumuluzee-config-consul</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.kumuluz.ee.config</groupId>-->
+<!--            <artifactId>kumuluzee-config-consul</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>io.swagger.core.v3</groupId>
             <artifactId>swagger-annotations</artifactId>

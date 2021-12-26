@@ -1,6 +1,7 @@
 package si.fri.rso.recommendation.api.v1.resources;
 
 
+import com.kumuluz.ee.logs.LogManager;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import io.swagger.v3.oas.annotations.Operation;
@@ -25,7 +26,8 @@ import java.util.logging.Logger;
 @Produces(MediaType.APPLICATION_JSON)
 public class DemoResource {
 
-    private Logger log = Logger.getLogger(DemoResource.class.getName());
+    private com.kumuluz.ee.logs.Logger logger= LogManager.getLogger(DemoResource.class.getName());
+
 
     @Inject
     private RestProperties restProperties;
@@ -38,6 +40,20 @@ public class DemoResource {
     public Response makeUnhealthy() {
 
         restProperties.setBroken(true);
+        logger.info("Making service unhealthy.");
+
+        return Response.status(Response.Status.OK).build();
+    }
+
+    @GET
+    @Operation(description = "Make service back healthy.",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Service healthy.")})
+    @Path("heal")
+    public Response makeHealthy() {
+
+        restProperties.setBroken(false);
+        logger.info("Making service healthy.");
 
         return Response.status(Response.Status.OK).build();
     }
