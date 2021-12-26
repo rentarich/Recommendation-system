@@ -31,6 +31,12 @@ kumuluzee:
   config:
     consul:
       agent: http://20.62.179.11/consul
+    start-retry-delay-ms: 500
+    max-retry-delay-ms: 900000
+    etcd:
+      hosts: my-release-etcd.ingress-basic.svc.cluster.local
+      username: root
+      password: etcd
   logs:
     config-file: '<?xml version="1.0" encoding="UTF-8"?>
                             <Configuration name="comments">

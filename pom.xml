@@ -102,6 +102,11 @@
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger-annotations.version}</version>
             </dependency>
+            <dependency>
+                <artifactId>kumuluzee-config-etcd</artifactId>
+                <groupId>com.kumuluz.ee.config</groupId>
+                <version>${kumuluzee-config.version}</version>
+            </dependency>
 <!--            <dependency>-->
 <!--                <groupId>com.kumuluz.ee.config</groupId>-->
 <!--                <artifactId>kumuluzee-config-consul</artifactId>-->

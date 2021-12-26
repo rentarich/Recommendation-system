@@ -41,7 +41,7 @@ public class DemoResource {
 
         restProperties.setBroken(true);
         logger.info("Making service unhealthy.");
-
+        logger.info("TEST: "+restProperties.getMaintenanceMode().toString());
         return Response.status(Response.Status.OK).build();
     }
 
