@@ -25,6 +25,15 @@ http://20.102.34.64/recommendation/v1/persons/1/recommend
 5. set new value
 6. test
 
+### ETCD
+
+clone https://github.com/henszey/etcd-browser
+```
+cd to repo
+docker build -t etcd-browser .
+docker run --rm --name etcd-browser -p 0.0.0.0:8000:8000 --env ETCD_HOST=URL ETCD_PORT=PORT --env AUTH_PASS=doe -t -i etcd-browser
+```
+
 ### K8S
 1. install [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)
 2. open cmd

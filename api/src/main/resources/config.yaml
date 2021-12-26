@@ -31,12 +31,20 @@ kumuluzee:
   config:
     consul:
       agent: http://20.62.179.11/consul
-    start-retry-delay-ms: 500
+    start-retry-delay-ms: 200
     max-retry-delay-ms: 900000
     etcd:
-      hosts: my-release-etcd.ingress-basic.svc.cluster.local
+      hosts: http://20.62.179.11:2379
+      ttl:30
+      ping-interval: 5
       username: root
       password: etcd
+  cors-filter:
+    annotations:
+      my-resource:
+        allow-origin: "http://localhost:4200"
+        allow-subdomains: true
+        supported-methods: "GET, POST, DELETE, HEAD, OPTIONS, PUT"
   logs:
     config-file: '<?xml version="1.0" encoding="UTF-8"?>
                             <Configuration name="comments">
