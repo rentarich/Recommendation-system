@@ -34,17 +34,11 @@ kumuluzee:
     start-retry-delay-ms: 200
     max-retry-delay-ms: 900000
     etcd:
-      hosts: http://20.62.179.11:2379
-      ttl:30
-      ping-interval: 5
-      username: root
-      password: etcd
+      hosts: http://20.102.33.31:2379
   cors-filter:
-    annotations:
-      my-resource:
-        allow-origin: "http://localhost:4200"
-        allow-subdomains: true
-        supported-methods: "GET, POST, DELETE, HEAD, OPTIONS, PUT"
+    servlet:
+      allow-generic-http-requests: true
+      allow-origin: "*"
   logs:
     config-file: '<?xml version="1.0" encoding="UTF-8"?>
                             <Configuration name="comments">
