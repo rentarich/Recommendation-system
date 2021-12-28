@@ -9,7 +9,7 @@ INSERT INTO item (id,title, description, category) VALUES (8,'Climbing gear','Ge
 INSERT INTO item (id,title, description, category) VALUES (9,'Parachute','Perfect for sky-diving.','Sports');
 INSERT INTO item (id,title, description, category) VALUES (10,'Chess','Inside board game.','Board game');
 
-INSERT INTO person (id,username, email, role) VALUES (1,'crazyChica','rentarich.rso@gmail.com','user');
+INSERT INTO person (id,username, email, role) VALUES (1,'crazyChica','guna.buna@gmail.com','user');
 INSERT INTO person (id,username, email, role) VALUES (2,'crazyChichito','rentarich.rso@gmail.com','user');
 INSERT INTO person (id,username, email, role) VALUES (3,'chessLover','rentarich.rso@gmail.com','user');
 

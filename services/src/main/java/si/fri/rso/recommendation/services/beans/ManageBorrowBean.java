@@ -57,7 +57,12 @@ public class ManageBorrowBean {
         borrows.forEach(b -> categories.add(itemBean.getItem(b.getItem().getId()).getCategory()));
 
 
-        return sortCatalog(categories,uriInfo);
+        if(borrows.size()!=0) {
+            return sortCatalog(categories, uriInfo);
+        }
+        else{
+            return itemBean.getAvailableItemsFilter(uriInfo);
+        }
     }
 
 
