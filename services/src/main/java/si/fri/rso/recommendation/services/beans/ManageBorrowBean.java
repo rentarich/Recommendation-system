@@ -72,7 +72,7 @@ public class ManageBorrowBean {
         for(int i=0;i<items.size();i++) {
             Item item=items.get(i);
             String itemCategory=item.getCategory().replaceAll("\\s+","%20");
-            //String rapidAPIkey = System.getenv("rapid-api-key");
+
             String url="https://text-similarity-calculator.p.rapidapi.com/stringcalculator.php?ftext="+mostCommonCategory+"&stext="+itemCategory;
             float matchScore = 0;
             try {

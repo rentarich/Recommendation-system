@@ -7,12 +7,12 @@
         <class>si.fri.rso.recommendation.models.models.Person</class>
         <class>si.fri.rso.recommendation.models.models.Borrow</class>
 
-
-        <properties>
+        <!--<properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
             <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
             <property name="javax.persistence.sql-load-script-source" value="sql-scripts/init-db.sql"/>
             <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
-        </properties>
+        </properties>-->
+
     </persistence-unit>
 </persistence>

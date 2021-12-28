@@ -11,6 +11,13 @@ spec:
   rules:
     - http:
         paths:
+          - path: /catalog(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: catalog
+                port:
+                  number: 5555
           - path: /consul(/|$)(.*)
             pathType: Prefix
             backend:
@@ -25,3 +32,17 @@ spec:
                 name: recommendation
                 port:
                   number: 3333
+          - path: /message(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: message
+                port:
+                  number: 2222
+          - path: /favourites(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: favourites
+                port:
+                  number: 4444

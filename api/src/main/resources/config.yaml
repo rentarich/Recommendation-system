@@ -21,6 +21,8 @@ kumuluzee:
       data-source-health-check:
         type: liveness
         jndi-name: jdbc/ItemDS
+      disk-space-health-check:
+        threshold: 100000000
   metrics:
     servlet:
       enabled: true
@@ -31,10 +33,10 @@ kumuluzee:
   config:
     consul:
       agent: http://20.62.179.11/consul
-    start-retry-delay-ms: 200
-    max-retry-delay-ms: 900000
-    etcd:
-      hosts: http://20.102.33.31:2379
+    #start-retry-delay-ms: 200
+    #max-retry-delay-ms: 900000
+    #etcd:
+      #hosts: http://20.120.64.140:2379
   cors-filter:
     servlet:
       allow-generic-http-requests: true
