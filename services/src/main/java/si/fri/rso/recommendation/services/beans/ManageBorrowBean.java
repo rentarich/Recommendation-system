@@ -3,6 +3,7 @@ import com.kumuluz.ee.logs.LogManager;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import org.eclipse.microprofile.metrics.MetricUnits;
 import org.eclipse.microprofile.metrics.annotation.Counted;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 import si.fri.rso.recommendation.models.models.Borrow;
@@ -21,7 +22,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @ApplicationScoped
-@Timed(name = "ManageBorrowBean")
+@Timed(name = "ManageBorrowBean",unit = MetricUnits.SECONDS)
 public class ManageBorrowBean {
 
     @Inject
